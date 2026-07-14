@@ -1,43 +1,102 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#05091b">
-<meta name="description" content="COSMOS is a worldwide location-aware outdoor sky game owned and developed by Danny Giager.">
-<meta name="author" content="Danny Giager">
-<title>COSMOS | The Galaxy Is Yours</title>
-<style>
-:root{--bg:#040716;--panel:rgba(13,22,55,.78);--line:rgba(155,191,255,.18);--text:#f4f7ff;--muted:#aab8d8;--violet:#8a7cff;--cyan:#5ce1e6;--gold:#ffd978;--safe:#6ee7a7}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;min-height:100vh;color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,sans-serif;background:radial-gradient(circle at 70% 0,#26306d 0,transparent 35%),radial-gradient(circle at 10% 45%,#17285a 0,transparent 30%),var(--bg);overflow-x:hidden}body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.55;background-image:radial-gradient(#fff 1px,transparent 1px),radial-gradient(#8dc8ff 1px,transparent 1px);background-size:47px 47px,83px 83px;background-position:7px 12px,31px 22px}.wrap{width:min(1100px,calc(100% - 28px));margin:auto;position:relative}.top{position:sticky;top:0;z-index:20;backdrop-filter:blur(18px);background:rgba(4,7,22,.76);border-bottom:1px solid var(--line)}nav{height:72px;display:flex;align-items:center;justify-content:space-between}.brand{display:flex;align-items:center;gap:12px;font-weight:900;letter-spacing:.14em}.mark{width:39px;height:39px;border:1px solid #98a7ff;border-radius:50%;position:relative;box-shadow:0 0 24px #685cff66}.mark:before{content:"";position:absolute;width:48px;height:14px;border:2px solid var(--cyan);border-radius:50%;transform:rotate(-18deg);left:-6px;top:11px}.brand small{display:block;font-size:10px;color:var(--muted);letter-spacing:.08em;margin-top:2px}.pill,.btn{border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.06);color:var(--text);padding:11px 16px;font-weight:750;cursor:pointer}.btn.primary{background:linear-gradient(135deg,var(--violet),#4f76ff);border:0;box-shadow:0 10px 35px #645cff44}.btn:hover{transform:translateY(-1px)}main{padding:34px 0 64px}.card{background:linear-gradient(145deg,rgba(24,35,79,.88),rgba(7,13,35,.86));border:1px solid var(--line);border-radius:24px;box-shadow:0 20px 80px rgba(0,0,0,.28);backdrop-filter:blur(16px)}.hero{min-height:470px;padding:clamp(28px,6vw,68px);display:grid;grid-template-columns:1.15fr .85fr;align-items:center;overflow:hidden;position:relative}.eyebrow{color:var(--cyan);font-size:12px;font-weight:900;letter-spacing:.18em}.hero h1{font-size:clamp(44px,8vw,88px);line-height:.93;margin:18px 0}.hero h1 span{background:linear-gradient(90deg,#fff,var(--cyan),#9f8cff);-webkit-background-clip:text;color:transparent}.hero p{max-width:620px;color:var(--muted);font-size:17px;line-height:1.65}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}.planet{width:min(310px,64vw);aspect-ratio:1;border-radius:50%;margin:auto;background:radial-gradient(circle at 32% 27%,#d3e7ff 0,#7975ff 16%,#28346c 47%,#080d22 73%);box-shadow:inset -35px -20px 55px #02040dcc,0 0 70px #6b65ff55;position:relative}.planet:before{content:"";position:absolute;width:132%;height:26%;left:-16%;top:37%;border:10px solid rgba(100,225,230,.68);border-left-color:transparent;border-right-color:#9789ff;border-radius:50%;transform:rotate(-17deg);box-shadow:0 0 22px #5ce1e655}.hidden{display:none!important}.dashboard{display:grid;gap:18px}.location{padding:22px;display:flex;justify-content:space-between;align-items:center;gap:16px}.location h2{margin:5px 0;font-size:30px}.muted{color:var(--muted)}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.stat{padding:20px}.stat span{color:var(--muted);font-size:13px}.stat strong{display:block;font-size:32px;margin-top:6px}.grid{display:grid;grid-template-columns:1.05fr .95fr;gap:18px}.skycard,.missions{padding:22px}.skyhead{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}.sky{width:100%;aspect-ratio:1;border-radius:50%;position:relative;overflow:hidden;background:radial-gradient(circle,#1e2b66 0,#090f2d 53%,#02040e 75%);border:1px solid #8ca7ff33;box-shadow:inset 0 0 70px #000}.sky:before,.sky:after{content:"";position:absolute;inset:12%;border:1px solid #aec7ff24;border-radius:50%}.sky:after{inset:31%}.cross{position:absolute;background:#aac4ff1b}.cross.h{height:1px;width:100%;top:50%}.cross.v{width:1px;height:100%;left:50%}.star{position:absolute;border:0;background:transparent;color:#fff;transform:translate(-50%,-50%);cursor:pointer;padding:7px;text-shadow:0 0 8px currentColor}.star i{display:block;border-radius:50%;background:currentColor;box-shadow:0 0 9px currentColor}.star b{position:absolute;white-space:nowrap;font-size:9px;font-weight:650;left:12px;top:5px;color:#dce6ff;opacity:.88}.directions{display:flex;justify-content:space-between;color:#7587b7;font-size:11px;margin-top:8px}.missions h2,.skycard h2{margin:0}.mission{border:1px solid var(--line);border-radius:17px;padding:15px;margin-top:12px;background:rgba(255,255,255,.035)}.mission.done{opacity:.58}.missiontop{display:flex;gap:12px;align-items:flex-start}.missionicon{width:38px;height:38px;display:grid;place-items:center;border-radius:12px;background:#8077ff24;color:var(--gold);font-size:20px;flex:0 0 auto}.mission h3{margin:1px 0 6px;font-size:16px}.mission p{margin:0;color:var(--muted);font-size:13px;line-height:1.45}.missionfoot{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:12px}.reward{color:var(--gold);font-size:12px;font-weight:800}.complete{font-size:12px;padding:8px 12px}.safety{padding:22px}.safety strong{color:var(--safe)}.footer{text-align:center;color:#8291b5;padding:28px 10px;font-size:13px}.modal{position:fixed;inset:0;background:#02040ccc;z-index:50;display:grid;place-items:center;padding:18px}.modalbox{width:min(560px,100%);padding:25px}.cities{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:18px 0}.city{border:1px solid var(--line);background:#ffffff09;color:white;border-radius:14px;padding:14px;text-align:left;cursor:pointer}.city strong,.city small{display:block}.city small{color:var(--muted);margin-top:4px}.toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,30px);background:#121c41;border:1px solid #8faaff44;border-radius:999px;padding:12px 18px;opacity:0;transition:.25s;z-index:60}.toast.show{opacity:1;transform:translate(-50%,0)}@media(max-width:780px){.hero{grid-template-columns:1fr;min-height:auto}.planet{width:220px;margin-top:36px}.grid{grid-template-columns:1fr}.stats{grid-template-columns:repeat(3,1fr)}.stat{padding:14px}.stat strong{font-size:24px}.brand small{display:none}}@media(max-width:500px){.wrap{width:min(100% - 18px,1100px)}main{padding-top:14px}.hero{padding:25px 20px;border-radius:20px}.hero h1{font-size:49px}.stats{gap:8px}.stat{border-radius:17px}.stat span{font-size:11px}.stat strong{font-size:21px}.location{align-items:flex-start}.cities{grid-template-columns:1fr}}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#05091b">
+  <meta name="description" content="COSMOS is a location-aware sky exploration game owned and developed by Danny Giager.">
+  <meta name="author" content="Danny Giager">
+  <title>COSMOS | The Galaxy Is Yours</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<header class="top"><nav class="wrap"><div class="brand"><span class="mark"></span><span>COSMOS<small>THE GALAXY IS YOURS</small></span></div><button class="pill" id="level">Level 1 ✦</button></nav></header>
+<header class="top">
+  <nav class="wrap">
+    <div class="brand"><span class="mark"></span><span>COSMOS<small>THE GALAXY IS YOURS</small></span></div>
+    <div class="navright"><button class="pill" id="rankPill">Guest Explorer</button><button class="iconbtn" id="accountBtn" aria-label="Account">👤</button></div>
+  </nav>
+</header>
 <main class="wrap">
-<section class="hero card" id="hero"><div><div class="eyebrow">WORLDWIDE OUTDOOR SKY GAME</div><h1>Your sky.<br><span>Your adventure.</span></h1><p>COSMOS turns the real stars above your location into missions. Step outside, discover the night sky, earn Stardust, and connect with explorers around the world.</p><div class="actions"><button class="btn primary" id="locate">Use my location</button><button class="btn" id="demo">Choose a city</button></div><p style="font-size:12px">Your coordinates remain in this browser. No account is required for this prototype.</p></div><div class="planet" aria-hidden="true"></div></section>
-<section class="dashboard hidden" id="dash">
-<div class="location card"><div><div class="eyebrow">TONIGHT'S EXPEDITION</div><h2 id="place">Your Sky</h2><div class="muted" id="summary">Calculating...</div></div><button class="btn" id="change">Change</button></div>
-<div class="stats"><div class="stat card"><span>VISIBLE TARGETS</span><strong id="count">0</strong></div><div class="stat card"><span>STARDUST</span><strong id="dust">0</strong></div><div class="stat card"><span>MISSIONS</span><strong id="progress">0/0</strong></div></div>
-<div class="grid"><section class="skycard card"><div class="skyhead"><div><div class="eyebrow">LIVE SKY DOME</div><h2>Above you now</h2></div><button class="pill" id="refresh">Refresh</button></div><div class="sky" id="sky"><span class="cross h"></span><span class="cross v"></span></div><div class="directions"><span>W</span><span>N</span><span>E</span><span>S</span><span>W</span></div><p class="muted" id="detail">Tap a star for its direction and height.</p></section><section class="missions card"><div class="eyebrow">LOCAL SKY QUESTS</div><h2>Tonight's missions</h2><div id="missions"></div></section></div>
-<section class="safety card"><div class="eyebrow">EXPLORE RESPONSIBLY</div><p><strong>Family Mode is always on in this prototype.</strong> Stay with an adult when appropriate, use familiar public areas, obey closing times, carry a light, watch traffic and weather, and never enter private property, railways, waterways, construction sites, or isolated locations.</p></section>
-</section>
+  <section class="hero card" id="hero">
+    <div>
+      <div class="eyebrow">WORLDWIDE SKY EXPLORATION GAME</div>
+      <h1>Zoom beyond.<br><span>Earn your rank.</span></h1>
+      <p>Explore the real sky above your location, zoom into stars and galaxies, complete daily missions, collect badges, and rise through the COSMOS ranks.</p>
+      <div class="actions"><button class="btn primary" id="startBtn">Sign in to begin</button><button class="btn" id="guestBtn">Preview as guest</button></div>
+      <p class="fineprint">Profiles and progress are stored on this device. Cross-device accounts require a secure cloud service in a future release.</p>
+    </div>
+    <div class="planet" aria-hidden="true"></div>
+  </section>
+
+  <section class="dashboard hidden" id="dash">
+    <div class="welcome card">
+      <div><div class="eyebrow">TONIGHT'S EXPEDITION</div><h2 id="place">Your Sky</h2><div class="muted" id="summary">Calculating...</div></div>
+      <div class="actions compact"><button class="btn small" id="changeLocation">Change location</button><button class="btn small" id="refreshSky">Refresh sky</button></div>
+    </div>
+
+    <div class="stats">
+      <div class="stat card"><span>RANK</span><strong id="rank">Stargazer</strong><div class="rankline"><i id="rankBar"></i></div></div>
+      <div class="stat card"><span>EXPERIENCE</span><strong id="xp">0 XP</strong></div>
+      <div class="stat card"><span>STARDUST</span><strong id="dust">0 ✦</strong></div>
+      <div class="stat card"><span>BADGES</span><strong id="badgeCount">0/8</strong></div>
+    </div>
+
+    <div class="grid">
+      <section class="skycard card">
+        <div class="sectionhead"><div><div class="eyebrow">LIVE SKY DOME</div><h2>Above you now</h2></div><span class="pill" id="visibleCount">0 targets</span></div>
+        <div class="sky" id="sky"><span class="cross h"></span><span class="cross v"></span></div>
+        <div class="directions"><span>W</span><span>N</span><span>E</span><span>S</span><span>W</span></div>
+        <p class="muted" id="detail">Tap a star to open the zoom explorer.</p>
+      </section>
+      <section class="missions card"><div class="eyebrow">DAILY SKY QUESTS</div><h2>Today's challenges</h2><p class="muted" id="challengeDate"></p><div id="missions"></div></section>
+    </div>
+
+    <section class="catalog card">
+      <div class="sectionhead"><div><div class="eyebrow">DEEP-SKY EXPLORER</div><h2>Stars and galaxies</h2></div><button class="btn small" id="shuffleObjects">Shuffle discoveries</button></div>
+      <div class="objectgrid" id="objectGrid"></div>
+    </section>
+
+    <section class="badges card"><div class="eyebrow">ACHIEVEMENTS</div><h2>Badge cabinet</h2><p class="muted">Badges unlock automatically as your exploration record grows.</p><div class="badgegrid" id="badgeGrid"></div></section>
+
+    <section class="safety card"><div class="eyebrow">EXPLORE RESPONSIBLY</div><p><strong>Family Mode is always on.</strong> Stay with an adult when appropriate, use familiar public areas, obey closing times, carry a light, watch traffic and weather, and never enter private property, railways, waterways, construction sites, or isolated locations.</p></section>
+  </section>
 </main>
 <footer class="footer">COSMOS: The Galaxy Is Yours<br><strong>Owner &amp; Developer: Danny Giager</strong><br>Fairview, Oklahoma · Founding Observatory No. 1</footer>
-<div class="modal hidden" id="modal"><div class="modalbox card"><div class="eyebrow">SELECT A DEMO SKY</div><h2>Explore from anywhere</h2><p class="muted">Choose a city or close this window and use your device location.</p><div class="cities" id="cities"></div><button class="btn" id="close">Close</button></div></div><div class="toast" id="toast"></div>
-<script>
-const OWNER='Danny Giager',KEY='cosmos-danny-v1';
-const cities=[['Fairview, Oklahoma','Founding Observatory No. 1',36.2689,-98.4798],['London, England','Northern sky',51.5072,-.1276],['Nairobi, Kenya','Equatorial sky',-1.2921,36.8219],['Tokyo, Japan','Northern sky',35.6762,139.6503],['Sydney, Australia','Southern sky',-33.8688,151.2093],['Ushuaia, Argentina','Far southern sky',-54.8019,-68.303]];
-const stars=[['Sirius','Canis Major',6.7525,-16.716,-1.46],['Canopus','Carina',6.399,-52.696,-.74],['Arcturus','Boötes',14.261,19.182,-.05],['Alpha Centauri','Centaurus',14.66,-60.834,-.27],['Vega','Lyra',18.616,38.784,.03],['Capella','Auriga',5.278,45.998,.08],['Rigel','Orion',5.242,-8.202,.13],['Procyon','Canis Minor',7.655,5.225,.34],['Achernar','Eridanus',1.629,-57.237,.46],['Betelgeuse','Orion',5.92,7.407,.5],['Hadar','Centaurus',14.064,-60.373,.61],['Altair','Aquila',19.846,8.868,.77],['Acrux','Crux',12.443,-63.099,.76],['Aldebaran','Taurus',4.599,16.509,.85],['Antares','Scorpius',16.49,-26.432,.96],['Spica','Virgo',13.42,-11.161,.98],['Pollux','Gemini',7.755,28.026,1.14],['Fomalhaut','Piscis Austrinus',22.961,-29.622,1.16],['Deneb','Cygnus',20.691,45.28,1.25],['Regulus','Leo',10.14,11.967,1.35],['Castor','Gemini',7.577,31.888,1.58],['Bellatrix','Orion',5.419,6.35,1.64],['Polaris','Ursa Minor',2.53,89.264,1.98],['Dubhe','Ursa Major',11.062,61.751,1.79],['Alkaid','Ursa Major',13.792,49.313,1.86],['Gacrux','Crux',12.519,-57.113,1.63],['Nunki','Sagittarius',18.921,-26.297,2.05],['Mirach','Andromeda',1.162,35.621,2.07]];
-let s=JSON.parse(localStorage.getItem(KEY)||'{"dust":0,"done":[],"total":0}'),loc=null,visible=[],missions=[];const $=q=>document.querySelector(q),rad=x=>x*Math.PI/180,deg=x=>x*180/Math.PI,norm=x=>(x%360+360)%360;
-function jd(d){return d.getTime()/864e5+2440587.5}function skypos(st,la,lo,d){let lst=norm(280.46061837+360.98564736629*(jd(d)-2451545)+lo),ha=norm(lst-st[2]*15);if(ha>180)ha-=360;let p=rad(la),de=rad(st[3]),h=rad(ha),alt=Math.asin(Math.sin(de)*Math.sin(p)+Math.cos(de)*Math.cos(p)*Math.cos(h)),az=Math.atan2(-Math.sin(h)*Math.cos(de),Math.sin(de)*Math.cos(p)-Math.cos(de)*Math.sin(p)*Math.cos(h));return{n:st[0],c:st[1],m:st[4],alt:deg(alt),az:norm(deg(az))}}
-function dir(a){return['north','northeast','east','southeast','south','southwest','west','northwest'][Math.round(a/45)%8]}function save(){localStorage.setItem(KEY,JSON.stringify(s))}function toast(t){$('#toast').textContent=t;$('#toast').classList.add('show');setTimeout(()=>$('#toast').classList.remove('show'),2400)}
-function openSky(l){loc=l;$('#hero').classList.add('hidden');$('#dash').classList.remove('hidden');$('#place').textContent=l.name;visible=stars.map(x=>skypos(x,l.lat,l.lon,new Date())).filter(x=>x.alt>3).sort((a,b)=>a.m-b.m);$('#count').textContent=visible.length;$('#summary').textContent=`${l.region} · ${visible.length} bright catalog stars above the horizon`;buildMissions();renderSky();renderMissions();stats();window.scrollTo({top:0,behavior:'smooth'})}
-function renderSky(){let box=$('#sky');box.querySelectorAll('.star').forEach(x=>x.remove());visible.forEach(st=>{let r=(90-st.alt)/90*47,a=rad(st.az-90),x=50+r*Math.cos(a),y=50+r*Math.sin(a),b=document.createElement('button');b.className='star';b.style=`left:${x}%;top:${y}%;color:${st.m<.5?'#fff0c4':'#d9e7ff'}`;let size=Math.max(3,8-st.m*2);b.innerHTML=`<i style="width:${size}px;height:${size}px"></i>${st.m<1.2?`<b>${st.n}</b>`:''}`;b.onclick=()=>$('#detail').textContent=`${st.n} · ${st.c} · ${Math.round(st.alt)}° high toward the ${dir(st.az)}`;box.appendChild(b)})}
-function buildMissions(){let top=visible.slice(0,8),a=top[0]||visible[0],b=top[1]||a,date=new Date().toISOString().slice(0,10),base=`${date}-${loc.lat.toFixed(1)}-${loc.lon.toFixed(1)}`;missions=[];if(a)missions.push({id:base+'-'+a.n,t:'Find '+a.n,d:`Face ${dir(a.az)} and look about ${Math.round(a.alt)}° above the horizon. Identify this bright star in ${a.c}.`,r:180,i:'✦'});if(b)missions.push({id:base+'-compare',t:'Brightness challenge',d:`Compare ${a.n} and ${b.n}. Decide which looks brighter, then tap both on the sky dome.`,r:210,i:'◈'});missions.push({id:base+'-walk',t:'Family orbit walk',d:'Walk together for at least 10 minutes in a familiar legal public area. Stop twice to scan the sky.',r:150,i:'⌁'});missions.push({id:base+'-dark',t:'Dark-sky detective',d:'Count how many stars you can see in one small patch of sky, then move away from a nearby light and count again.',r:170,i:'◒'});missions.push({id:base+'-note',t:'Cosmic field note',d:'Choose one star, record its direction and height, and describe its color in your own words.',r:130,i:'⌖'})}
-function renderMissions(){let root=$('#missions');root.innerHTML='';missions.forEach(m=>{let done=s.done.includes(m.id),e=document.createElement('article');e.className='mission'+(done?' done':'');e.innerHTML=`<div class="missiontop"><div class="missionicon">${m.i}</div><div><h3>${m.t}</h3><p>${m.d}</p></div></div><div class="missionfoot"><span class="reward">+${m.r} Stardust</span><button class="btn complete" ${done?'disabled':''}>${done?'Completed ✓':'Complete'}</button></div>`;e.querySelector('button').onclick=()=>{if(s.done.includes(m.id))return;s.done.push(m.id);s.dust+=m.r;s.total++;save();renderMissions();stats();toast(`Mission complete. +${m.r} Stardust`)};root.appendChild(e)})}
-function stats(){let done=missions.filter(m=>s.done.includes(m.id)).length,level=Math.floor(s.dust/500)+1;$('#dust').textContent=s.dust.toLocaleString();$('#progress').textContent=done+'/'+missions.length;$('#level').textContent=`Level ${level} ✦`}
-function modal(){let root=$('#cities');root.innerHTML='';cities.forEach(c=>{let b=document.createElement('button');b.className='city';b.innerHTML=`<strong>${c[0]}</strong><small>${c[1]}</small>`;b.onclick=()=>{$('#modal').classList.add('hidden');openSky({name:c[0],region:c[1],lat:c[2],lon:c[3]})};root.appendChild(b)});$('#modal').classList.remove('hidden')}
-$('#locate').onclick=()=>{if(!navigator.geolocation)return modal();navigator.geolocation.getCurrentPosition(p=>openSky({name:'Your current sky',region:`${Math.abs(p.coords.latitude).toFixed(1)}° ${p.coords.latitude>=0?'N':'S'} latitude`,lat:p.coords.latitude,lon:p.coords.longitude}),()=>{toast('Location was unavailable. Choose a demo city.');modal()},{enableHighAccuracy:false,timeout:9000,maximumAge:6e5})};$('#demo').onclick=modal;$('#change').onclick=modal;$('#close').onclick=()=>$('#modal').classList.add('hidden');$('#refresh').onclick=()=>{if(loc){openSky(loc);toast('Sky recalculated')}};$('#modal').onclick=e=>{if(e.target.id==='modal')$('#modal').classList.add('hidden')};stats();
-</script>
+
+<div class="modal hidden" id="accountModal"><div class="modalbox card">
+  <div class="modalhead"><div><div class="eyebrow">DEVICE PROFILE</div><h2>Sign in to COSMOS</h2></div><button class="closex" data-close="accountModal">×</button></div>
+  <div class="notice">This prototype uses local device profiles, not a cloud account. A PIN prevents casual profile switching but is not secure online authentication.</div>
+  <div class="tabs"><button class="tab active" data-tab="signin">Sign in</button><button class="tab" data-tab="create">Create profile</button></div>
+  <section id="signinPanel"><div class="profilelist" id="profileList"></div><p class="muted" id="noProfiles">No profiles on this device yet.</p></section>
+  <section class="hidden" id="createPanel">
+    <div class="field"><label>Explorer name</label><input id="newName" maxlength="30" autocomplete="name" placeholder="Your name"></div>
+    <div class="field"><label>Email, optional</label><input id="newEmail" type="email" maxlength="80" autocomplete="email" placeholder="name@example.com"></div>
+    <div class="field"><label>4-digit PIN</label><input id="newPin" inputmode="numeric" maxlength="4" type="password" placeholder="••••"></div>
+    <button class="btn primary" id="createProfile">Create and sign in</button>
+  </section>
+</div></div>
+
+<div class="modal hidden" id="pinModal"><div class="modalbox card narrow">
+  <div class="modalhead"><div><div class="eyebrow">WELCOME BACK</div><h2 id="pinTitle">Enter PIN</h2></div><button class="closex" data-close="pinModal">×</button></div>
+  <div class="field"><label>4-digit PIN</label><input id="loginPin" inputmode="numeric" maxlength="4" type="password" placeholder="••••"></div>
+  <button class="btn primary" id="loginProfile">Sign in</button>
+</div></div>
+
+<div class="modal hidden" id="locationModal"><div class="modalbox card">
+  <div class="modalhead"><div><div class="eyebrow">SELECT YOUR SKY</div><h2>Set expedition location</h2></div><button class="closex" data-close="locationModal">×</button></div>
+  <button class="btn primary full" id="useLocation">Use my current location</button>
+  <div class="profilelist" id="cityList"></div>
+</div></div>
+
+<div class="modal hidden" id="explorerModal"><div class="modalbox wide card">
+  <div class="modalhead"><div><div class="eyebrow" id="objectKind">COSMIC OBJECT</div><h2 id="objectName">Object</h2><div class="muted" id="objectSubtitle"></div></div><button class="closex" data-close="explorerModal">×</button></div>
+  <div class="explorelayout">
+    <div><div class="viewer"><canvas id="objectCanvas" width="700" height="520"></canvas></div><div class="zoomrow"><button class="btn small" id="zoomOut">−</button><input id="zoomSlider" type="range" min="1" max="8" step=".1" value="1"><button class="btn small" id="zoomIn">+</button><span class="pill" id="zoomLabel">1.0×</span></div></div>
+    <div><p id="objectDescription" class="muted description"></p><div class="facts" id="objectFacts"></div><div class="progressbox"><strong>Explorer reward</strong><p class="muted" id="objectReward"></p><button class="btn gold" id="logDiscovery">Log discovery</button></div></div>
+  </div>
+</div></div>
+<div class="toast" id="toast"></div>
+<script src="data.js"></script>
+<script src="app.js"></script>
 </body>
 </html>
